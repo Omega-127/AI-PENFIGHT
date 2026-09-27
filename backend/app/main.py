@@ -10,6 +10,7 @@ from fastapi.responses import JSONResponse
 from ai.clients.llm_client import get_llm_client
 from backend.app.config import settings
 from backend.app.routers.analysis import router as analysis_router
+from backend.app.routers.feedback import router as feedback_router
 from backend.app.schemas import HealthResponse
 
 logging.basicConfig(
@@ -71,6 +72,8 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 # Include Routers
 app.include_router(analysis_router)
+app.include_router(feedback_router)
+
 
 
 @app.get("/api/v1/health", response_model=HealthResponse, tags=["Health"])

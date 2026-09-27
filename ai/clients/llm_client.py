@@ -10,6 +10,7 @@ import logging
 import os
 import re
 import time
+import uuid
 from typing import Any, Dict, Optional
 
 import httpx
@@ -75,7 +76,7 @@ class DevelopmentFallbackClient(BaseLLMClient):
             })
 
         return {
-            "analysis_id": f"an_fallback_{int(time.time())}",
+            "analysis_id": f"an_fallback_{uuid.uuid4().hex[:10]}",
             "overall_feedback": (
                 "Your debate argument presents a clear stance with passionate rhetoric. "
                 "However, the logical transitions between your central premise and your conclusions "
