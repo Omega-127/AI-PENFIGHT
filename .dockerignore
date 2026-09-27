@@ -1,0 +1,16 @@
+.git
+.github
+.gitignore
+.env
+*.env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+tests/
+frontend/
+docs/
+.vscode
+.idea
+*.log

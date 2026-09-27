@@ -122,11 +122,14 @@ Execute the automated test suite with pytest:
 # Run all tests
 python -m pytest -v
 
-# Run only AI module unit tests
-python -m pytest tests/test_input_processing.py tests/test_pattern_detection.py tests/test_decision_engine.py tests/test_feedback_generation.py tests/test_evaluation.py -v
+# Run AI module unit tests step-by-step
+python -m pytest tests/ai/ -v
 
-# Run API integration tests
-python -m pytest tests/test_backend_api.py -v
+# Run Backend API tests
+python -m pytest tests/backend/ -v
+
+# Run Integration end-to-end tests
+python -m pytest tests/integration/ -v
 ```
 
 ---
