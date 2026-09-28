@@ -98,7 +98,7 @@ Render also supports building directly from the provided [`Dockerfile`](../Docke
 3. Import your GitHub repository: `AI-PENFIGHT`.
 4. In the **Configure Project** screen:
    - **Framework Preset**: `Next.js`
-   - **Root Directory**: Click **Edit** and select `frontend` (or leave default if relying on root `vercel.json`).
+   - **Root Directory**: Click **Edit** and set it to `frontend` (Required: this monorepo houses Next.js inside the `frontend/` directory).
 5. Expand **Environment Variables** and add:
 
 | Variable Name | Value | Description |
